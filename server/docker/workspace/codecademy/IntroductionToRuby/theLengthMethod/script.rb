@@ -1,0 +1,1 @@
+puts "How long it will takes?".length
