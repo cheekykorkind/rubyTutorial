@@ -1,7 +1,7 @@
 # rubyTutorial
 
 ### set up docker_compose_up.sh
-- `docker_compose_up.sh` makes docker volumes directory and set permission by your host machine.  
+- `docker_compose_up.sh` makes docker-compose.yml file for setting docker volumes directory and permission by your host machine.  
 - Volumes directory : ${APP_ROOT}/server/docker/workspace
 - Set docker image name youself  
 
@@ -16,11 +16,8 @@ MY_DOCKER_IMAGE_NAME="your awesome docker image name"  # Set docker image name y
 ...
 ```
 
-### docker-compose up
+### make docker-compose.yml from docker-compose-dev.yml
 - sh ${APP_ROOT}/server/docker/docker_compose_up.sh up  
-
-### docker-compose down
-- sh ${APP_ROOT}/server/docker/docker_compose_up.sh down  
 
 ### get in docker container
 - docker exec -it ruby_tutorial /bin/bash  
