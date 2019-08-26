@@ -3,4 +3,4 @@ my_name and set it equal to your name as a string. Create a second variable call
 
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/variablesDataTypes/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/variablesDataTypes/script.rb

@@ -8,4 +8,4 @@ puts "eric".upcase    # ==> ERIC
 On the next line, call .downcase to make your name all lower case. Make sure to use puts so you can see it printed out!
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/upcaseDowncase/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/upcaseDowncase/script.rb

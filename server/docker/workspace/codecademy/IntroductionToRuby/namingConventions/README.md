@@ -3,4 +3,4 @@ Create a variable name in the editor and set it equal to your name as a string (
 
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/namingConventions/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/namingConventions/script.rb

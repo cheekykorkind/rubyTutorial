@@ -9,4 +9,4 @@ my_string to the value "Ruby"
 ```
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/dataType/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/dataType/script.rb

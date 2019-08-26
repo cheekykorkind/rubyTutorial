@@ -3,4 +3,4 @@ Create a multi-line comment in the editor to the right. Make sure =begin and =en
 
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/multiLineComments/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/multiLineComments/script.rb

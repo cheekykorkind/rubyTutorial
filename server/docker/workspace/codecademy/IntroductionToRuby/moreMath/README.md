@@ -7,5 +7,5 @@ quotient equal to 13209 / 17
 Print each variable to the console using puts if you want to see the results.
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/moreMath/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/moreMath/script.rb
 

@@ -8,4 +8,4 @@ name.method1.method2.method3
 puts the method call if you want to see the result.
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/stringsAndStringMethods/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/stringsAndStringMethods/script.rb

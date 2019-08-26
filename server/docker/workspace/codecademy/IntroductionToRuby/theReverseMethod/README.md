@@ -4,4 +4,4 @@ Call the .reverse method on your name. Don’t forget those quotation marks arou
 puts the answer to the console if you want to see the value.
 
 # result : 
-docker exec ruby_tutorial ruby ./codecademy/theReverseMethod/script.rb
+docker exec ruby_tutorial ruby ./codecademy/IntroductionToRuby/theReverseMethod/script.rb
