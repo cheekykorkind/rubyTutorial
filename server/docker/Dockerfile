@@ -1,22 +1,23 @@
-FROM ruby:2.5.3
+FROM ruby:2.6.4-slim
 
-RUN apt-get update
-RUN apt-get -y install locales && \
-    localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
-ENV LANG ja_JP.UTF-8
-ENV LANGUAGE ja_JP:ja
-ENV LC_ALL ja_JP.UTF-8
-ENV TZ JST-9
-ENV TERM xterm
+RUN apt update && apt upgrade -y && apt install -y curl gnupg && \
+    curl -sL https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    apt update  && apt install -y libpq-dev sudo gcc make patch graphviz tzdata libmagickwand-dev unzip cron cronutils
 
-ARG UID=70000
+ARG UID
+ARG GID
+ARG UNAME
+
 ENV UID ${UID}
-ARG GID=70000
 ENV GID ${GID}
-ARG UNAME=vagrant1
 ENV UNAME ${UNAME}
 
-RUN groupadd -g ${GID} ${UNAME}
-RUN useradd -u ${UID} -g ${UNAME} -m ${UNAME}
+RUN useradd --uid ${UID} --create-home --shell /bin/bash -G sudo,root ${UNAME}
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-RUN mkdir /home/${UNAME}/opt
+ENV app /home/$UNAME/workspace
+
+# Add a script to be executed every time the container starts.
+COPY ./entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
